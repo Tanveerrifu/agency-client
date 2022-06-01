@@ -43,7 +43,7 @@ const Login = () => {
 
   // Function that loading admins
   useEffect(() => {
-    fetch("http://localhost:5000/getAdmins")
+    fetch("https://infinite-wave-15770.herokuapp.com/getAdmins")
       .then((res) => res.json())
       .then((data) => {
         setAdminList(data);

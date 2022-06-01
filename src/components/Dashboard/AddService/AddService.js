@@ -16,7 +16,7 @@ const AddService = () => {
     formData.append("details", data.details);
     formData.append("file", data.logo[0]);
 
-    fetch("https://agency-jahed.herokuapp.com/addService", {
+    fetch("https://infinite-wave-15770.herokuapp.com/addService", {
       method: "POST",
       body: formData,
     })

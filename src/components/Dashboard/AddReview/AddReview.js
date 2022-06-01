@@ -12,7 +12,7 @@ const AddReview = () => {
 
   const onSubmit = (data) => {
     data.image = loggedInUser.photo;
-    fetch("https://agency-jahed.herokuapp.com/addFeedback", {
+    fetch("https://infinite-wave-15770.herokuapp.com/addFeedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

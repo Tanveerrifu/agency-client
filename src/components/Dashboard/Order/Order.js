@@ -23,7 +23,7 @@ const Order = () => {
     formData.append("status", status);
     formData.append("file", data.image[0]);
 
-    fetch("http://localhost:5000/addOrder", {
+    fetch("https://infinite-wave-15770.herokuapp.com/addOrder", {
       method: "POST",
       body: formData,
     })

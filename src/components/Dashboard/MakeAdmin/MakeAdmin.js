@@ -11,7 +11,7 @@ const MakeAdmin = () => {
   const [formSubmitStatus, setFormSubmitStatus] = useState("");
 
   const onSubmit = (data) => {
-    fetch("https://agency-jahed.herokuapp.com/addAdmin", {
+    fetch("https://infinite-wave-15770.herokuapp.com/addAdmin", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

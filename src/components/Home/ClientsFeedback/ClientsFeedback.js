@@ -6,7 +6,7 @@ const ClientsFeedback = () => {
   const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
-    fetch("https://agency-jahed.herokuapp.com/getFeedbacks")
+    fetch("https://infinite-wave-15770.herokuapp.com/getFeedbacks")
       .then((res) => res.json())
       .then((data) => setFeedbacks(data));
   }, []);

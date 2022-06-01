@@ -19,7 +19,7 @@ const ServiceList = () => {
 
   useEffect(() => {
     fetch(
-      "http://localhost:5000/getOrders?email=" + user.email
+      "https://infinite-wave-15770.herokuapp.com/getOrders?email=" + user.email
     )
       .then((res) => res.json())
       .then((data) => {
@@ -30,7 +30,7 @@ const ServiceList = () => {
 
   const handelCancel = (id) => {
     setLoading(true);
-    fetch("http://localhost:5000/cancelOrder/" + id, {
+    fetch("https://infinite-wave-15770.herokuapp.com/cancelOrder/" + id, {
       method: "DELETE",
     })
       .then((res) => res.json())

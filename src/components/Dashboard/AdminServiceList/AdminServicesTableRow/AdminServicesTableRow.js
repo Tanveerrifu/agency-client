@@ -14,7 +14,7 @@ const AdminServicesTableRow = ({ service }) => {
     formData.append("id", service._id);
     formData.append("status", e.target.value);
 
-    fetch("https://agency-jahed.herokuapp.com/updateOrderStatus", {
+    fetch("https://infinite-wave-15770.herokuapp.com/updateOrderStatus", {
       method: "PATCH",
       body: formData,
     })

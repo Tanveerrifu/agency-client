@@ -7,13 +7,13 @@ const OurServices = () => {
   const [services, setServices] = useState([]);
 
   useEffect(() => {
-    fetch("https://agency-jahed.herokuapp.com/getServices")
+    fetch("https://infinite-wave-15770.herokuapp.com/getServices")
       .then((res) => res.json())
       .then((data) => {
         setServices(data);
       });
   }, []);
-
+  console.log(services)
   return (
     <Container className="my-5 pt-5">
       <section className="our-services">

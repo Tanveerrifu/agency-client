@@ -12,7 +12,7 @@ const Works = () => {
   const [works, setWorks] = useState([]);
 
   useEffect(() => {
-    fetch("https://agency-jahed.herokuapp.com/getWorks")
+    fetch("https://infinite-wave-15770.herokuapp.com/getWorks")
       .then((res) => res.json())
       .then((data) => setWorks(data));
   }, []);

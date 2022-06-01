@@ -14,7 +14,7 @@ const AdminServiceList = () => {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
-    fetch("https://agency-jahed.herokuapp.com/getOrders?email=")
+    fetch("https://infinite-wave-15770.herokuapp.com/getOrders?email=")
       .then((res) => res.json())
       .then((data) => {
         setServiceList(data);
@@ -29,7 +29,7 @@ const AdminServiceList = () => {
   const handleSearchClick = () => {
     setLoading(true);
     fetch(
-      "https://agency-jahed.herokuapp.com/searchInOrder?searchTxt=" + searchText
+      "https://infinite-wave-15770.herokuapp.com/searchInOrder?searchTxt=" + searchText
     )
       .then((res) => res.json())
       .then((data) => {
