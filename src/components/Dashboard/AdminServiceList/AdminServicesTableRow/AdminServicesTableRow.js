@@ -13,11 +13,7 @@ const AdminServicesTableRow = ({ service }) => {
       status : newSelected
     }
 
-<<<<<<< HEAD
-     fetch(`https://infinite-wave-15770.herokuapp.com/updateOrderStatus/${service._id}`, {
-=======
     fetch(`https://infinite-wave-15770.herokuapp.com/updateOrderStatus/${service._id}`, {
->>>>>>> 7b5966342dd4e7c99eb1f8df511a39cecd2885d0
       method: "PUT",
       headers:{
         'content-type':'application/json'
