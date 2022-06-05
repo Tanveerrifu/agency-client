@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./AdminServicesTableRow.css";
 
 const AdminServicesTableRow = ({ service }) => {
+  console.log(service);
   const [selectedStatus, setSelectedStatus] = useState(service.status);
 
   const handleDropdownChange = (e) => {
@@ -12,7 +13,11 @@ const AdminServicesTableRow = ({ service }) => {
       status : newSelected
     }
 
+<<<<<<< HEAD
      fetch(`https://infinite-wave-15770.herokuapp.com/updateOrderStatus/${service._id}`, {
+=======
+    fetch(`https://infinite-wave-15770.herokuapp.com/updateOrderStatus/${service._id}`, {
+>>>>>>> 7b5966342dd4e7c99eb1f8df511a39cecd2885d0
       method: "PUT",
       headers:{
         'content-type':'application/json'
@@ -25,6 +30,7 @@ const AdminServicesTableRow = ({ service }) => {
           alert("order status updated successfully");
         }
       });
+
   };
 
   return (

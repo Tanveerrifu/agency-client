@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { UserContext } from "../../App";
 import auth from "../../firebase.init";
+import useAdmin from "../../hooks/useAdmin";
 import "./Login.css";
 
 const Login = () => {
@@ -39,7 +40,7 @@ const Login = () => {
   // state for toggling new user and registered user
   const [isNewUser, setIsNewUser] = useState(true);
   const [adminList, setAdminList] = useState([]);
-
+  const [isAdmin] = useAdmin(user)
   // Function that loading admins
   useEffect(() => {
     fetch("https://infinite-wave-15770.herokuapp.com/getAdmins")
@@ -82,9 +83,21 @@ const Login = () => {
   if (user || emailUser) {
     const admin = adminList.find((admin) => admin.email === user.email);
     const newUser = { ...user.email, isAdmin: Boolean(admin) };
+<<<<<<< HEAD
     console.log(newUser, ...user.email);
     setLoggedInUser(newUser);
     newUser.isAdmin ? navigate("/adminServicesList") : navigate("/order");
+=======
+
+    // navigate('/')
+    // setLoggedInUser(newUser);
+    if(user && isAdmin){
+      navigate("/adminServicesList")
+    } 
+    if(user && !isAdmin) {
+      navigate("/order")
+    }
+>>>>>>> 7b5966342dd4e7c99eb1f8df511a39cecd2885d0
   }
 
   if (error) {

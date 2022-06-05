@@ -1,8 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import SweetAlert from "react-bootstrap-sweetalert";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../../App";
+import auth from "../../../firebase.init";
+import useAdmin from "../../../hooks/useAdmin";
 import Sidebar from "../Sidebar/Sidebar";
 import "./Order.css";
 
@@ -11,6 +15,9 @@ const Order = () => {
   const { register, handleSubmit, errors } = useForm();
   const { loggedInUser } = useContext(UserContext);
   const [formSubmitStatus, setFormSubmitStatus] = useState("");
+  const [user] = useAuthState(auth)
+  const [isAdmin] = useAdmin(user)
+  const navigate = useNavigate()
 
   const onSubmit = (data) => {
     const status = "Pending";
@@ -37,6 +44,10 @@ const Order = () => {
         }
       });
   };
+  
+  if(isAdmin){
+    navigate("/adminServicesList")
+  }
 
   return (
     <Container fluid>
