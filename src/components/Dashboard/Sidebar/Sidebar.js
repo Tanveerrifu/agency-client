@@ -10,16 +10,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signOut } from "firebase/auth";
 import React, { useContext } from "react";
 import { Button } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../../App";
 import auth from "../../../firebase.init";
+import useAdmin from "../../../hooks/useAdmin";
 import "./Sidebar.css";
 // import { handleSignOut } from "../../Login/loginManager";
 
 const Sidebar = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
-  // let history = useHistory();
-  const navigate = useNavigate()
+  const [user] = useAuthState(auth);
+  const [isAdmin] = useAdmin(user)
+  console.log(isAdmin);
 
   // const signOut = () => {
   //   handleSignOut().then((res) => {
@@ -39,8 +42,8 @@ const Sidebar = () => {
       />
       </Link>
       <div style={{ height: "650" }} className="mt-5 pb-sm-5">
-        {loggedInUser.isAdmin ? (
-          <>
+        {isAdmin &&  
+        <>
             <Link to="/adminServicesList">
               <FontAwesomeIcon
                 title="Services Admin"
@@ -65,37 +68,38 @@ const Sidebar = () => {
               &nbsp;&nbsp;
               <span className="d-md-inline-block d-none">MakeAdmin</span>
             </Link>
-          </>
-        ) : (
-          <>
-            <Link to="/order">
-              <FontAwesomeIcon
-                title="Order"
-                icon={faShoppingCart}
-              ></FontAwesomeIcon>
-              &nbsp;&nbsp;
-              <span className="d-md-inline-block d-none">Order</span>
-            </Link>
-            <br />
-            <Link to="/serviceList">
-              <FontAwesomeIcon
-                title="ServiceList"
-                icon={faList}
-              ></FontAwesomeIcon>
-              &nbsp;&nbsp;
-              <span className="d-md-inline-block d-none">ServiceList</span>
-            </Link>
-            <br />
-            <Link to="/addReview">
-              <FontAwesomeIcon
-                title="Review"
-                icon={faStickyNote}
-              ></FontAwesomeIcon>
-              &nbsp;&nbsp;
-              <span className="d-md-inline-block d-none">Review</span>
-            </Link>
-          </>
-        )}
+          </>}
+
+        {!isAdmin && 
+           <>
+           <Link to="/order">
+             <FontAwesomeIcon
+               title="Order"
+               icon={faShoppingCart}
+             ></FontAwesomeIcon>
+             &nbsp;&nbsp;
+             <span className="d-md-inline-block d-none">Order</span>
+           </Link>
+           <br />
+           <Link to="/serviceList">
+             <FontAwesomeIcon
+               title="ServiceList"
+               icon={faList}
+             ></FontAwesomeIcon>
+             &nbsp;&nbsp;
+             <span className="d-md-inline-block d-none">ServiceList</span>
+           </Link>
+           <br />
+           <Link to="/addReview">
+             <FontAwesomeIcon
+               title="Review"
+               icon={faStickyNote}
+             ></FontAwesomeIcon>
+             &nbsp;&nbsp;
+             <span className="d-md-inline-block d-none">Review</span>
+           </Link>
+         </>
+         }
 
         <div className="my-5"></div>
         <Button onClick={()=>signOut(auth)} variant="danger">LogoOut <FontAwesomeIcon title="LogOut" icon={faSignOutAlt}></FontAwesomeIcon></Button>

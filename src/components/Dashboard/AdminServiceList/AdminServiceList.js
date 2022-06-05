@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Col, Container, Row, Table } from "react-bootstrap";
+import LoadingMask from "react-loadingmask";
+import "react-loadingmask/dist/react-loadingmask.css";
 import { UserContext } from "../../../App";
 import Sidebar from "../Sidebar/Sidebar";
 import "./AdminServiceList.css";
 import AdminServicesTableRow from "./AdminServicesTableRow/AdminServicesTableRow";
-import LoadingMask from "react-loadingmask";
-import "react-loadingmask/dist/react-loadingmask.css";
 
 const AdminServiceList = () => {
   const [serviceList, setServiceList] = useState([]);
@@ -21,6 +21,8 @@ const AdminServiceList = () => {
         setLoading(false);
       });
   }, []);
+
+  console.log(setServiceList);
 
   const handleOnBlur = (e) => {
     setSearchText(e.target.value);

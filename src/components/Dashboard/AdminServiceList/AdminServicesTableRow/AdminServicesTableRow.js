@@ -1,22 +1,24 @@
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./AdminServicesTableRow.css";
 
 const AdminServicesTableRow = ({ service }) => {
+  console.log(service);
   const [selectedStatus, setSelectedStatus] = useState(service.status);
 
   const handleDropdownChange = (e) => {
     const newSelected = e.target.value;
     setSelectedStatus(newSelected);
 
-    const formData = new FormData();
-    formData.append("id", service._id);
-    formData.append("status", e.target.value);
+    const newValue = {
+      status : newSelected
+    }
 
-    fetch("https://infinite-wave-15770.herokuapp.com/updateOrderStatus", {
-      method: "PATCH",
-      body: formData,
+    fetch(`https://infinite-wave-15770.herokuapp.com/updateOrderStatus/${service._id}`, {
+      method: "PUT",
+      headers:{
+        'content-type':'application/json'
+      },
+      body: JSON.stringify(newValue),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -24,6 +26,7 @@ const AdminServicesTableRow = ({ service }) => {
           alert("order status updated successfully");
         }
       });
+
   };
 
   return (
