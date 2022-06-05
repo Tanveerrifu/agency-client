@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { useSendPasswordResetEmail } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
@@ -7,17 +7,26 @@ import AppNavbar from "../../Shared/AppNavbar/AppNavbar";
 // import { handlePasswordReset } from "../loginManager";
 
 const PasswordRecovery = () => {
+  const [email,setEmail] = useState("")
   const [resetMessage, setResetMessage] = useState("");
   const [sendPasswordResetEmail, sending, error] = useSendPasswordResetEmail(
     auth
   );
 
   const { register, handleSubmit, errors } = useForm();
-  const onSubmit = async (data) => {
-    await sendPasswordResetEmail(data.email);
+ 
+  const onSubmit = async data => {
+    await sendPasswordResetEmail(email);
     setResetMessage("Please check your email");
-  };
-
+    }
+   if(sending){
+     console.log(sending)
+   }
+   if(error){
+    console.log(error)
+  }
+  
+ console.log(sending,error)
   return (
     <Container fluid>
       <AppNavbar />
@@ -38,6 +47,7 @@ const PasswordRecovery = () => {
               <input
                 placeholder="example@mail.com"
                 className="form-control my-3"
+                onChange={e=>setEmail(e.target.value)}
                 name="resetEmail"
                 ref={register({ required: "This field can't be empty" })}
               />

@@ -67,7 +67,7 @@ const Footer = () => {
       </Container>
       <br />
       <p className="mt-5 mb-3 text-center">
-        Copyright Md Jahedul Hoque {new Date().getFullYear()}
+        Copyright Tanvir Hasan {new Date().getFullYear()}
       </p>
     </footer>
   );

@@ -83,11 +83,6 @@ const Login = () => {
   if (user || emailUser) {
     const admin = adminList.find((admin) => admin.email === user.email);
     const newUser = { ...user.email, isAdmin: Boolean(admin) };
-<<<<<<< HEAD
-    console.log(newUser, ...user.email);
-    setLoggedInUser(newUser);
-    newUser.isAdmin ? navigate("/adminServicesList") : navigate("/order");
-=======
 
     // navigate('/')
     // setLoggedInUser(newUser);
@@ -97,7 +92,6 @@ const Login = () => {
     if(user && !isAdmin) {
       navigate("/order")
     }
->>>>>>> 7b5966342dd4e7c99eb1f8df511a39cecd2885d0
   }
 
   if (error) {

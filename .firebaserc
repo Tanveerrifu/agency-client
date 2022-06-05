@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "agency-jahed"
-  }
+    "default": "creative-agency-776e8",
+    "staging": "creative-agency-776e8"
+  },
+  "targets": {}
 }
