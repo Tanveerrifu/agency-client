@@ -10,7 +10,7 @@
 }
 
 .works-section {
-  background-color: #111430;
+  background-color: #f8f9fa;
   margin: 50px 0 !important;
 }
 
@@ -21,3 +21,6 @@
 .swiper-pagination-bullet-active {
   background-color: #fbd062 !important;
 }
+ .work-text{
+  color: tomato !important;
+ }

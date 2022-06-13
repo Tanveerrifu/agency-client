@@ -1,6 +1,6 @@
 header {
   border-top: 1px solid;
-  background-color: #fbd062;
+  background-color: #ffffff;
   position: relative;
   bottom: 76px;
   z-index: -1;
@@ -35,4 +35,7 @@ header {
   .header-container {
     height: 720px;
   }
+}
+.slogan1 {
+  color: tomato;
 }

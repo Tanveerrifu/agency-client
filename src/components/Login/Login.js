@@ -13,6 +13,7 @@ import { UserContext } from "../../App";
 import auth from "../../firebase.init";
 import useAdmin from "../../hooks/useAdmin";
 import "./Login.css";
+import Logo from '../../images/logo.svg'
 
 const Login = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -112,7 +113,7 @@ const Login = () => {
           alt=""
         /> */}
         <Link to="/">
-          <img className="w-25" src="https://i.imgur.com/UMV8bTj.png" alt="" />
+          <img className="w-25" src={Logo} alt="" />
         </Link>
       </div>
       <div className="form-container">

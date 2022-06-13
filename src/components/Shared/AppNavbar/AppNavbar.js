@@ -7,6 +7,7 @@ import { UserContext } from "../../../App";
 import auth from "../../../firebase.init";
 import useAdmin from "../../../hooks/useAdmin";
 import "./AppNavbar.css";
+import Logo from '../../../images/logo.svg'
 
 const AppNavbar = () => {
   const [user] = useAuthState(auth);
@@ -15,15 +16,16 @@ const AppNavbar = () => {
   console.log(isAdmin);
 
   return (
-    <Container className="nav-container" fluid>
-      <Navbar collapseOnSelect expand="lg">
+    
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Link to="/">
           <Navbar.Brand>
             <img
               className="logo"
-              src="https://i.imgur.com/UMV8bTj.png"
+              src={Logo}
               alt=""
             />
+           
           </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -35,7 +37,8 @@ const AppNavbar = () => {
 
             {!isAdmin && <Nav.Link href="/order">Dashboard</Nav.Link>}
 
-            <Nav.Link href="#team">Our Team</Nav.Link>
+            <Nav.Link href="#feedback">Reviews</Nav.Link>
+            <Nav.Link href="#Team">Team</Nav.Link>
             <Nav.Link href="#contact">Contact Us</Nav.Link>
             <Nav>
               {user ? (
@@ -48,7 +51,7 @@ const AppNavbar = () => {
                 </Button>
               ) : (
                 <Link to="/login">
-                  <Button className="" variant="dark">
+                  <Button className="login-button" variant="dark">
                     Login
                   </Button>
                 </Link>
@@ -57,7 +60,7 @@ const AppNavbar = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-    </Container>
+    
   );
 };
 

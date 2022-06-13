@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Header.css";
+//import Banner from '../../../images/banner.png'
 
 const Header = () => {
   return (
@@ -10,7 +11,7 @@ const Header = () => {
           <Col className="my-2" md={6}>
             <div className="header-details">
               <h1 className="header-title">
-                Let's Grow Your
+                <span className="slogan1">Let's Grow Your</span>
                 <br />
                 Brand To The
                 <br />

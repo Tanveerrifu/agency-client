@@ -5,17 +5,20 @@ import ClientsFeedback from "../ClientsFeedback/ClientsFeedback";
 import Header from "../Header/Header";
 import OurClients from "../OurClients/OurClients";
 import OurServices from "../OurServices/OurServices";
+import Team from "../Team/Team";
 import Works from "../Works/Works";
+
 
 const Home = () => {
   return (
     <div>
       <AppNavbar></AppNavbar>
       <Header />
-      <OurClients />
+      {/* <OurClients /> */}
       <OurServices />
-      <Works />
+      {/* <Works /> */}
       <ClientsFeedback />
+      <Team />
       <Footer />
     </div>
   );

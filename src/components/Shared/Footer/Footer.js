@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "#FBD062",
+        backgroundColor: "#ffffff",
         padding: "50px 10px",
         width: "100%",
       }}
@@ -15,11 +15,10 @@ const Footer = () => {
         <Row>
           <Col md={6}>
             <h1>
-              Let us handle your <br /> project, professionally.
+              Let us handle your <br /> problem, professionally.
             </h1>
             <p>
-              With well written codes, we build amazing apps for all platforms,
-              mobile and web apps in general.
+            we’ll create a permanent employment solution by creating an open job field.
             </p>
           </Col>
           <Col md={6}>

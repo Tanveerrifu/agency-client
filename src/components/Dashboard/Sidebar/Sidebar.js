@@ -16,6 +16,7 @@ import { UserContext } from "../../../App";
 import auth from "../../../firebase.init";
 import useAdmin from "../../../hooks/useAdmin";
 import "./Sidebar.css";
+import Logo from '../../../images/logo.svg'
 // import { handleSignOut } from "../../Login/loginManager";
 
 const Sidebar = () => {
@@ -37,7 +38,7 @@ const Sidebar = () => {
       <img
         // onClick={() => history.push("/")}
         className="w-lg-75 w-100 h-100 mt-4"
-        src="https://i.imgur.com/UMV8bTj.png"
+        src={Logo}
         alt=""
       />
       </Link>
@@ -102,7 +103,7 @@ const Sidebar = () => {
          }
 
         <div className="my-5"></div>
-        <Button onClick={()=>signOut(auth)} variant="danger">LogoOut <FontAwesomeIcon title="LogOut" icon={faSignOutAlt}></FontAwesomeIcon></Button>
+        <Button onClick={()=>signOut(auth)} variant="danger">Log Out <FontAwesomeIcon title="LogOut" icon={faSignOutAlt}></FontAwesomeIcon></Button>
         {/* <button
           
           style={{ color: "red", marginTop: "50px" }}
