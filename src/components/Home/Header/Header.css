@@ -13,7 +13,7 @@ header {
 
 .main-button {
   color: white !important;
-  background-color: #111430 !important;
+  background-color: #7ab259 !important;
   padding: 8px 40px !important;
   border: 0px !important;
   border-radius: 8px !important;
@@ -37,5 +37,5 @@ header {
   }
 }
 .slogan1 {
-  color: tomato;
+  color: #7ab259;
 }

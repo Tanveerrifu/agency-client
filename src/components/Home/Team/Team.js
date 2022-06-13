@@ -11,7 +11,7 @@ const Team = () => {
 
         <div id='Team'>
             <h2>Meet Our
-                <span className='tomato'>Team</span>
+                <span className='tomato'> Team</span>
             </h2>
             <CardGroup className='p-2'>
                 <Card className='m-5'>
