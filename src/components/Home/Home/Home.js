@@ -1,5 +1,6 @@
 import React from "react";
 import AppNavbar from "../../Shared/AppNavbar/AppNavbar";
+import ChatBot from "../../Shared/ChatBot/ChatBot";
 import Footer from "../../Shared/Footer/Footer";
 import ClientsFeedback from "../ClientsFeedback/ClientsFeedback";
 import Header from "../Header/Header";
@@ -14,6 +15,7 @@ const Home = () => {
     <div>
       <AppNavbar></AppNavbar>
       <Header />
+      <ChatBot />
       {/* <OurClients /> */}
       <OurServices />
       {/* <Works /> */}
