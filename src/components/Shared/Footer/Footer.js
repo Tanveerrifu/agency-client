@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "#ffffff",
+        backgroundColor: "#71EA8C",
         padding: "50px 10px",
         width: "100%",
       }}

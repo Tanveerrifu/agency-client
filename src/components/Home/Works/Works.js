@@ -24,7 +24,7 @@ const Works = () => {
       <Container fluid>
         <div className="py-4">
           <h3 className="text-center text-white main-title">
-            <span className="work-text">Here are some of</span> <span>our works</span>
+            <span className="work-text">Here are some of our works </span>
           </h3>
           <br />
           <div className="mt-3">

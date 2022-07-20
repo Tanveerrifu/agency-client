@@ -1,6 +1,13 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./OurClients.css";
+import client1 from '../../../images/logos/airbnb.png'
+import client2 from '../../../images/logos/google.png'
+import client3 from '../../../images/logos/netflix.png'
+import client4 from '../../../images/logos/slack.png'
+import client5 from '../../../images/logos/uber.png'
+
+
 
 const OurClients = () => {
   return (
@@ -9,19 +16,19 @@ const OurClients = () => {
         <div>
           <Row>
             <Col xs={4} md={{ span: 2, offset: 1 }} lg={{ span: 2, offset: 1 }}>
-              <img src="https://i.imgur.com/iYNrqMb.png" alt="" />
+              <img src={client1} alt="" />
             </Col>
             <Col xs={4} md={2} lg={2}>
-              <img src="https://i.imgur.com/wjU6yV8.png" alt="" />
+              <img src={client2} alt="" />
             </Col>
             <Col xs={4} md={2} lg={2}>
-              <img src="https://i.imgur.com/HPJZkGG.png" alt="" />
+              <img src={client3} alt="" />
             </Col>
             <Col xs={4} md={2} lg={2}>
-              <img src="https://i.imgur.com/OlfsZjT.png" alt="" />
+              <img src={client4} alt="" />
             </Col>
             <Col xs={4} md={2} lg={2}>
-              <img src="https://i.imgur.com/03T2vAh.png" alt="" />
+              <img src={client5} alt="" />
             </Col>
           </Row>
         </div>

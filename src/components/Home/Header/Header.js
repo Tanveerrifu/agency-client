@@ -1,7 +1,8 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Header.css";
-import Banner from '../../../images/banner.png'
+import banner from '../../../images/banner.svg'
+import hireImg from '../../../images/hire-us.svg'
 
 const Header = () => {
   return (
@@ -11,11 +12,11 @@ const Header = () => {
           <Col className="my-2" md={6}>
             <div className="header-details">
               <h1 className="header-title">
-                <span className="slogan1">Let's Grow Your</span>
+                A Complete
                 <br />
-                Brand To The
+                Software & Hardware
                 <br />
-                Next Level
+                Solution
               </h1>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -23,13 +24,17 @@ const Header = () => {
                 perferendis itaque. Rem voluptates quidem voluptas excepturi,
                 ducimus laboriosam nesciunt atque, ipsam vel magni ex?
               </p>
-              <Button className="main-button">Hire us</Button>
+              <img
+              className="hire-us"
+              src={hireImg}
+              alt=""
+            />
             </div>
           </Col>
           <Col className="my-2" md={6}>
             <img
               className="header-img"
-              src={Banner}
+              src={banner}
               alt=""
             />
           </Col>
