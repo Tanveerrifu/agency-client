@@ -1,7 +1,19 @@
 import React from "react";
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import emailjs from 'emailjs-com';
 
 const Footer = () => {
+  function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_0xtsayt',
+    'template_egpaxjg',
+    e.target,
+    'oZwP1qR7h3X7DEppj').then(res=>{
+      console.log(res);
+    }).catch(err=>console.log(err));
+    e.target.reset()
+  }
   return (
     <footer
       style={{
@@ -22,7 +34,7 @@ const Footer = () => {
             </p>
           </Col>
           <Col md={6}>
-            <Form action="mailto:tanvirrifat670@gmail.com" >
+            <Form onSubmit={sendEmail}>
               <Form.Group>
                 <Form.Control
                   name="email"
