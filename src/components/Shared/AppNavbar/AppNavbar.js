@@ -13,7 +13,7 @@ const AppNavbar = () => {
   const [user] = useAuthState(auth);
   const [isAdmin] = useAdmin(user);
   const { loggedInUser } = useContext(UserContext);
-  console.log(isAdmin);
+  console.log(isAdmin,loggedInUser);
 
   return (
     

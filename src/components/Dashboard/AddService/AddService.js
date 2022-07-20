@@ -15,13 +15,14 @@ const AddService = () => {
     formData.append("title", data.title);
     formData.append("details", data.details);
     formData.append("file", data.logo[0]);
-
+    console.log(formData)
     fetch("https://infinite-wave-15770.herokuapp.com/addService", {
       method: "POST",
       body: formData,
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data)
         if (data) {
           setFormSubmitStatus("Service added successfully");
           document.getElementById("addServiceForm").reset();
@@ -30,7 +31,7 @@ const AddService = () => {
         }
       });
   };
-
+  console.log(loggedInUser)
   return (
     <Container fluid>
       <Row>

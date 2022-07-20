@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Header.css";
-//import Banner from '../../../images/banner.png'
+import Banner from '../../../images/banner.png'
 
 const Header = () => {
   return (
@@ -29,7 +29,7 @@ const Header = () => {
           <Col className="my-2" md={6}>
             <img
               className="header-img"
-              src="https://i.imgur.com/ToN8Hyc.png"
+              src={Banner}
               alt=""
             />
           </Col>

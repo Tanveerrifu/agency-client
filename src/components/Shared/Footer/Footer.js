@@ -22,7 +22,7 @@ const Footer = () => {
             </p>
           </Col>
           <Col md={6}>
-            <Form>
+            <Form action="mailto:tanvirrifat670@gmail.com" >
               <Form.Group>
                 <Form.Control
                   name="email"

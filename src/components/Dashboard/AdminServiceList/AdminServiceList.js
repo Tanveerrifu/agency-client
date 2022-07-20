@@ -52,7 +52,7 @@ const AdminServiceList = () => {
               <h4>All Services</h4>
             </Col>
             <Col md={{ span: 3, offset: 6 }} xs={6}>
-              <h5>{loggedInUser.name}(Admin)</h5>
+              <h5>(Admin)</h5>
             </Col>
           </Row>
           <div

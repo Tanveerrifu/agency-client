@@ -19,6 +19,7 @@ const useAdmin = (user) => {
         const checkAdmin = () => {
           const admin = adminList.find((admin) => admin?.email === email);
           setIsAdmin(Boolean(admin))
+          console.log(admin)
         }
         checkAdmin()
       }, [adminList, user, email]);
