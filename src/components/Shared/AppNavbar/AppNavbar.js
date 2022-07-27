@@ -37,6 +37,7 @@ const AppNavbar = () => {
 
             {!isAdmin && <Nav.Link href="/order">Dashboard</Nav.Link>}
 
+            <Nav.Link href="#price">Pricing</Nav.Link>
             <Nav.Link href="#feedback">Reviews</Nav.Link>
             <Nav.Link href="#Team">Team</Nav.Link>
             <Nav.Link href="#contact">Contact Us</Nav.Link>

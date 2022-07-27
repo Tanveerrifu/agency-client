@@ -19,10 +19,7 @@ const Header = () => {
                 Solution
               </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                suscipit modi, dignissimos expedita architecto perspiciatis
-                perferendis itaque. Rem voluptates quidem voluptas excepturi,
-                ducimus laboriosam nesciunt atque, ipsam vel magni ex?
+                We are here to help you by giving Software and Hardware Solution. Our Dedicated Engineers will observe your problems will give solution with exoert hands!!
               </p>
               <img
               className="hire-us"

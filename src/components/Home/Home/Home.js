@@ -6,6 +6,7 @@ import ClientsFeedback from "../ClientsFeedback/ClientsFeedback";
 import Header from "../Header/Header";
 import OurClients from "../OurClients/OurClients";
 import OurServices from "../OurServices/OurServices";
+import Price from "../Price/Price";
 import Team from "../Team/Team";
 import Works from "../Works/Works";
 
@@ -19,6 +20,7 @@ const Home = () => {
       <OurClients />
       <OurServices />
       <Works />
+      <Price />
       <ClientsFeedback />
       <Team />
       <Footer />
