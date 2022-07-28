@@ -17,7 +17,7 @@ const Home = () => {
       <AppNavbar></AppNavbar>
       <Header />
       <ChatBot />
-      <OurClients />
+      {/* <OurClients /> */}
       <OurServices />
       <Works />
       <Price />
