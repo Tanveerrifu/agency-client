@@ -23,16 +23,18 @@ header {
   width: 100%;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 650px) {
   header {
     bottom: 1px;
   }
 
   .header-title {
+    margin-top: 1px;
     font-size: 30px;
   }
 
   .header-container {
+    margin-top: 1px;
     height: 720px;
   }
 }
